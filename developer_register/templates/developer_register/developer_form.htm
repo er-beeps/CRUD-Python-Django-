@@ -1,0 +1,47 @@
+{% extends "developer_register/base.htm" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<form action="" method="post" autocomplete="off">
+    {% csrf_token %}
+    <div class="row">
+        <div class="col-md-4">
+            {{ form.first_name|as_crispy_field }}
+        </div>
+        <div class="col-md-4">
+            {{ form.last_name|as_crispy_field }}
+        </div>
+        <div class="col-md-4">
+            {{ form.image|as_crispy_field }}
+        </div>
+    </div>
+    {{ form.gender|as_crispy_field }}
+    <div class="row">
+        <div class="col-md-4">
+            {{ form.mobile|as_crispy_field }}
+        </div>
+        <div class="col-md-8">
+            {{ form.email|as_crispy_field }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            {{ form.position|as_crispy_field }}
+        </div>
+        <div class="col-md-6">
+            {{ form.experience|as_crispy_field }}
+        </div>
+    </div>
+    {{ form.remarks|as_crispy_field }}
+    <div class="row">
+        <div class="col-md-6">
+            <button type="submit" class="btn btn-success btn-block btn-lg"><i class="fas fa-database"> Submit </i> </button>
+        </div>
+        <div class="col-md-6">
+            <a href="{% url 'developer_list' %}" class="btn btn-secondary btn-block btn-lg"><i
+                    class="fas fa-stream">Back to list</i></a>
+        </div>
+    </div>
+
+</form>
+{% endblock content %}
