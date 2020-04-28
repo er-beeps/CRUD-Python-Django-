@@ -6,7 +6,7 @@ class DeveloperFilter(django_filters.FilterSet):
     first_name = CharFilter(field_name = 'first_name' , lookup_expr = 'icontains')
     last_name = CharFilter(field_name = 'last_name' , lookup_expr = 'icontains')
     email = CharFilter(field_name='email' , lookup_expr = 'icontains')
-    experirence = CharFilter(field_name = 'experirence' , lookup_expr = 'icontains')
+    experience = CharFilter(field_name = 'experience' , lookup_expr = 'icontains')
     class Meta:
         model = Developer
         fields = '__all__'
