@@ -2,6 +2,19 @@
 
 {% block content %}
 <a href="{% url 'developer_insert' %}" class="btn btn-outline-success"><i class="fas fa-plus">Add New</i></a>
+<div class="row">
+    <div class="col">
+        <div class="card card-body">
+            <form action="" method="GET">
+
+                {{ developerfilter.form}}
+
+                <button class="btn btn-primary" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</div>
+
 <table class="table table_striped">
     <thead class="font-weight:bold">
         <tr>
